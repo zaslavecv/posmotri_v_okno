@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -30,9 +33,241 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 ul,
 ol {
   list-style: none;
 }
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+main.content {
+  display: grid;
+  grid-template-columns: 711px 399px;
+  gap: 30px;
+  align-items: end;
+}
+
+.result__video-container {
+  position: relative;
+  height: 386px;
+  margin-top: 80px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.content__accent {
+  color: rgb(84, 80, 80);
+}
+
+.content__list {
+  overflow-y: scroll;
+  height: 298px;
+  position: relative;
+  margin-top: 21px;
+}
+
+.content__list-item {
+  margin-bottom: 30px;
+}
+
+.content__card-link{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px;
+}
+
+.content__card-link_current {
+  background-color: rgb(84, 80, 80);
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  width: 194px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-title {
+  font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  margin-top: 8px;
+}
+
+.search-form{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: end;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title,
+.search-form__label {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  display: flex;
+  margin: 2px;
+  padding: 2px;
+  align-items: center;
+}
+
+.search-form__label:hover {
+  cursor: pointer;
+}
+
+.search-form__fieldset-title {
+  margin: 0 0 5px 0;
+}
+
+.search-form__textfield{
+  background: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  padding: 5px 0 2px 0;
+  width: 225px;
+  color: #fff;
+  appearance: none;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.search-form__pseudo-checkbox{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+  margin-right: 3px;
+}
+
+.search-form__checkbox:checked + span {
+  background: #fff;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+  margin-bottom: 0;
+}
+
+.button {
+  display: block;
+  border: 1px solid #fff;
+  background: none;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  height: 34px;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  width: 194px;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.button:active {
+  background: rgb(84, 80, 80)
+}
+
+.button:hover{
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__card-link:focus {
+  border: 1px solid #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+search-form__label:focus,
+search-form__textfield:focus{
+  outline: none;
+}
+
+.search-form__textfield:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 0px;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.content__video-card-description-container{
+  flex-grow: 1;
+}
+
+.search-form__label-text{
+  margin-left: 5px;
+}
+
+git remote add origin https://github.com/zaslavecv/posmotri_v_okno.git
