@@ -51,11 +51,10 @@ ol {
   white-space: nowrap;
 }
 
-main.content {
+.content {
   display: grid;
   grid-template-columns: 711px 399px;
   gap: 30px;
-  align-items: end;
 }
 
 .result__video-container {
@@ -98,10 +97,23 @@ main.content {
   color: #fff;
   text-decoration: none;
   padding: 2px;
+  margin: 2px;
 }
 
-.content__card-link_current {
+.content__card-link:focus,
+.content__card-link:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link_current,
+.content__card-link:active{
   background-color: rgb(84, 80, 80);
+  text-decoration: none;
 }
 
 .content__video-card-thumbnail {
@@ -121,16 +133,19 @@ main.content {
   font-family: 'Oswald', sans-serif;
   line-height: 100%;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0%;
+  margin-top: 3px;
 }
 
 .content__video-card-description {
-  margin-top: 8px;
+  margin-top: 1px;
 }
 
 .search-form{
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 14px;
   align-items: end;
 }
 
@@ -143,20 +158,26 @@ main.content {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: normal;
   font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0;
   display: flex;
-  margin: 2px;
-  padding: 2px;
   align-items: center;
+}
+
+.search-form__checkbox-list .search-form__label{
+  padding-left: 2px;
+  line-height: 19px;
 }
 
 .search-form__label:hover {
   cursor: pointer;
 }
 
+.search-form__label:focus-within {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 .search-form__fieldset-title {
-  margin: 0 0 5px 0;
+  margin: 2px 0 5px 0;
 }
 
 .search-form__textfield{
@@ -165,7 +186,7 @@ main.content {
   border-bottom: 1px solid #fff;
   border-left: none;
   border-right: none;
-  padding: 5px 0 2px 0;
+  padding: 5px 0;
   width: 225px;
   color: #fff;
   appearance: none;
@@ -187,15 +208,15 @@ main.content {
   margin-right: 3px;
 }
 
-.search-form__checkbox:checked + span {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
   background: #fff;
 }
 
 .search-form__checkbox-list {
   display: flex;
   justify-content: space-between;
-  width: 215px;
-  margin-bottom: 0;
+  width: 212px;
+  margin-bottom: 8px;
 }
 
 .button {
@@ -210,20 +231,13 @@ main.content {
   cursor: pointer;
 }
 
-.search-form__submit-button {
-  width: 194px;
-}
-
-.more-button {
-  width: 100%;
+.button:hover{
+  text-decoration: underline;
 }
 
 .button:active {
-  background: rgb(84, 80, 80)
-}
-
-.button:hover{
-  text-decoration: underline;
+  background: rgb(84, 80, 80);
+  text-decoration: none;
 }
 
 .button:focus {
@@ -235,27 +249,18 @@ main.content {
   outline-offset: 1px;
 }
 
-.content__card-link:focus {
-  border: 1px solid #fff;
+.search-form__submit-button {
+  width: 194px;
+  margin-bottom: 0px;
 }
 
-.content__card-link:hover {
-  text-decoration: underline;
-}
-
-search-form__label:focus,
-search-form__textfield:focus{
-  outline: none;
+.more-button {
+  width: 100%;
 }
 
 .search-form__textfield:focus-visible{
   outline: 1px solid #fff;
   outline-offset: 1px;
-}
-
-.search-form__label:focus-visible{
-  outline: 1px solid #fff;
-  outline-offset: 0px;
 }
 
 .content__list-item:last-child {
@@ -270,4 +275,6 @@ search-form__textfield:focus{
   margin-left: 5px;
 }
 
-git remote add origin https://github.com/zaslavecv/posmotri_v_okno.git
+.content__list-item:focus-visible{
+  outline: none;
+}
