@@ -121,6 +121,7 @@ ol {
   width: 194px;
   object-position: center;
   object-fit: cover;
+  flex-shrink: 0
 }
 
 .content__video-card {
@@ -132,7 +133,6 @@ ol {
 .content__video-card-description-container{
   flex-grow: 1;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .content__video-card-title {
